@@ -1,16 +1,39 @@
 <!DOCTYPE html>
 	<head>
-		<link rel="stylesheet" type="text/css" href="survery.css">
+		<link rel="stylesheet" href="survey.css">
 	</head>
-	<h1 id="title">Title of the survey</h1>
+	<main>
+		<h1 id="title">Title of the survey</h1>
 
-	<p id="description">Description of the survey</p>
-	<form id="survey-form">
-		<label for="name">First and last name:</label>
-		<input id="name" type="name" placeholder="First Last">
-		<label for="email">Email</label>
-		<input id="email" type="email" placeholder="email@domain.com">
-		<input type="submit" value="Submit">
+		<p id="description">Description of the survey</p>
+		<form id="survey-form">
+			<label for="name" id="name-label" >First and last name:</label>
+			<input id="name" type="name" placeholder="First Last" required>
+			<label for="email" id="email-label">Email</label>
+			<input id="email" type="email" placeholder="email@domain.com" required>
+			<label for="number" id="number-label">Number</label>
+			<input id="number" type="number" placeholder="Age" min="10" max="120">
+			<label for="dropdown" id="dropdown-label">Dropdown</label>
+			<select id="dropdown" name="level">
+				<option value="student">Student</option>
+				<option value="professional">Professional</option>
+			</select>
+			<p>What language do you speak?</p>
+			<input type="radio" name="language" id="spanish" value="Spanish" checked>
+			<label for="spanish">Spanish</label>
+			<input type="radio" name="language" id="english" value="English">
+			<label for="english">English</label><br>
 
-	</form>
+			<p>Which sports do you like?</p>
+			<input type="checkbox" name="sports" value="basketball">
+			<label>Basketball</label>
+			<input type="checkbox" name="sports" value="football">
+			<label>Football</label>
+			
+			<p>Any comments?</p>
+			<textarea id="comments" name="comment" placeholder="Enter comments here..."></textarea>
+			<br><br>
+			<input id="submit" type="submit" value="Submit">
+		</form>
+</main>
 
